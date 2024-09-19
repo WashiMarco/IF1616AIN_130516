@@ -1,0 +1,37 @@
+
+name: CI/CD Pipeline
+
+# Ejecutar el pipeline cuando haya un push con etiquetas de versiones
+on:
+  push:
+    tags:
+      - 'v*.*.*'  # Detecta etiquetas de versión en formato semántico (v1.0.0, v1.1.0, etc.)
+
+jobs:
+  # Primer trabajo: pruebas automáticas
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2  # Obtiene el código del repositorio
+      - name: Set up Python  # Configurar el entorno Python si es necesario
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'  # Versión de Python
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt  # Instalar dependencias si tienes un archivo requirements.txt
+      - name: Run tests
+        run: |
+          python -m unittest discover  # Ejecutar pruebas unitarias si las tienes
+
+  # Segundo trabajo: versionado semántico
+  release:
+    needs: test  # Solo se ejecuta si las pruebas anteriores pasaron
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2  # Obtiene el código del repositorio
+      - name: Set up Semantic Release  # Configurar Semantic Release
+        uses: cycjimmy/semantic-release-action@v2  # Plugin para Semantic Release
+      - name: Create release
+        run: |
+          npx semantic-release  # Ejecuta Semantic Release para manejar el versionado
