@@ -1,0 +1,21 @@
+user@user-Vivobook-ASUSLaptop-M3401QC-M3401QC:~/IF1616AIN_130516$ git log
+commit 820dbcb014560c15d381a2e0e87b909371afc2a2 (HEAD -> master)
+Author: Washington Bustamante <130516@unsaac.edu.pe>
+Date:   Thu Sep 19 19:28:30 2024 -0500
+
+    diario de la universidad, de los momentos, de todos los instantes que se pueden recordar, solo de mejores momentos en la etapa universitaria que nada tiene que ver con el mundo exterior
+
+commit 639f71d65410741f5b2116b16a1475b5ca4dc329
+Author: Washington Bustamante <130516@unsaac.edu.pe>
+Date:   Thu Sep 19 19:24:27 2024 -0500
+
+    listado de todos los estudiantes
+
+commit f1a26ba50e15ad3d83981590919f0220edcb58d4
+Author: Washington Bustamante <130516@unsaac.edu.pe>
+Date:   Thu Sep 19 19:16:38 2024 -0500
+
+    Añadir todos los archivos
+
+commit 7260f47a8d03bf6dd8d39a941f810ecd807ad017
+
