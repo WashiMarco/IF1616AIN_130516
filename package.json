@@ -1,0 +1,26 @@
+{
+  "name": "if1616ain_130516",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WashiMarco/IF1616AIN_130516.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WashiMarco/IF1616AIN_130516/issues"
+  },
+  "homepage": "https://github.com/WashiMarco/IF1616AIN_130516#readme",
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^10.3.4",
+    "semantic-release": "^24.1.1"
+  }
+}
